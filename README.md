@@ -62,6 +62,64 @@ Dollar's DAO splits time into distinct `epochs` of roughly one day to simplify l
 ```
 
 
+```
+{
+  fundsToBeFrozens(first: 5) {
+    id
+    epoch
+    daoStagedEsdFluidToFrozen
+    daoStagedEsdLockedToFrozen
+    daoBondedEsdsFluidToFrozen
+    daoBondedEsdsLockedToFrozen
+    lpStagedUniV2FluidToFrozen
+    lpBondedUniV2FluidToFrozen
+    lpClaimableEsdFluidToFrozen    
+  }
+}
+```
+
+```
+{
+  esdSupplyHistories(first: 5) {
+    id
+    epoch
+    daoLockedTotal
+    lpLockedTotal
+    totalSupply
+  }
+}
+```
+
+```
+{
+  lpUniV2TokenHistories(first: 5) {
+    id
+    epoch
+    totalStaged
+    totalBonded
+    totalSupply
+  }
+}
+```
+
+```
+{
+  addressInfos(first: 5) {
+    id
+    esdBalance
+    uniV2Balance
+    daoBondedEsds
+    daoStagedEsd
+    daoLockedUntilEpoch
+    daoFluidUntilEpoch
+    lpBondedUniV2
+    lpStagedUniV2
+    lpClaimableEsd
+    lpFluidUntilEpoch
+  }
+}
+```
+
 
 ## Contract Events Mapped by the SubGraph
 SubGraph currently listens to the following events to update the state of the indexed data.

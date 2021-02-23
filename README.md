@@ -7,13 +7,15 @@ This Subgraph ingests the following events emitted by the contracts of the ESD p
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
 
-1. Meta's `lpAddress` stores address of the current pool contract.
-        ```{
-          metas(first: 5) {
-            id
-            lpAddress
-          }
-        }```
+Meta's `lpAddress` stores address of the current pool contract.
+```
+{
+  metas(first: 5) {
+    id
+    lpAddress
+  }
+}
+```
 
 
 

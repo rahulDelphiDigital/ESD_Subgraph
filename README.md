@@ -1,9 +1,6 @@
 # Empty Set Dollar
 The dollar protocol is operated by a DAO that governs and operates the supply of its stablecoin ESD, a fully decentralized self-stabilizing dollar.
 
-# Empty Set Dollar Subgraph
-This Subgraph ingests the following events emitted by the contracts of the ESD protocol. 
-
 ## Terminologies
 
 **Bonding** - Bonding is the act of locking your token in the Empty Set Dollar DAO to gain benefits such as voting or rewards.
@@ -13,6 +10,10 @@ This Subgraph ingests the following events emitted by the contracts of the ESD p
 **Epoch** - Dollar's DAO splits time into distinct `epochs` of roughly 8 hours (28,800 Seconds) to simplify logic around governance, supply regulation, and flash loan resistance. Users are allowed to interact with the DAO by bonding or unbonding ESD or LP just once per epoch.
 
 **Coupons** - Coupons are offered by the protocol as an incentive to voluntarily burn ESD. The amount of ESD burned multiplied by the premium are issued in place of the burned ESD via coupons. When the money supply grows again the coupon holder may redeem their coupon for ESD at a one-to-one ratio. 
+
+# Empty Set Dollar Subgraph
+This Subgraph ingests the following events emitted by the contracts of the ESD protocol. 
+
 
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.

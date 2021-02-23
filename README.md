@@ -11,8 +11,10 @@ The dollar protocol is operated by a DAO that governs and operates the supply of
 
 **Coupons** - Coupons are offered by the protocol as an incentive to voluntarily burn ESD. The amount of ESD burned multiplied by the premium are issued in place of the burned ESD via coupons. When the money supply grows again the coupon holder may redeem their coupon for ESD at a one-to-one ratio. 
 
-# Empty Set Dollar Subgraph
-You can interact with the ESD SubGraph at - https://thegraph.com/explorer/subgraph/elfedy/ayaesg
+## Networks and Performance
+This subgraph can be found on The Graph Hosted Service at [https://thegraph.com/explorer/subgraph/elfedy/ayaesg](https://thegraph.com/explorer/subgraph/elfedy/ayaesg).
+
+You can also run this subgraph locally, if you wish. Instructions for that can be found in The Graph Documentation.
 
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
@@ -221,11 +223,6 @@ SubGraph currently listens to the following events to update the state of the in
         - Unbond(indexed address,uint256,uint256,uint256)
         - Claim(indexed address,uint256)
 
-
-## Networks and Performance
-This subgraph can be found on The Graph Hosted Service at [https://thegraph.com/explorer/subgraph/elfedy/ayaesg](https://thegraph.com/explorer/subgraph/elfedy/ayaesg).
-
-You can also run this subgraph locally, if you wish. Instructions for that can be found in The Graph Documentation.
 
 ## Contract Upgrades
 The subgraph has been kept in sync with the development of ESD.

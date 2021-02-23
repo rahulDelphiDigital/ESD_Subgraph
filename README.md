@@ -40,55 +40,55 @@ This Subgraph ingests the following events emitted by the contracts of the ESD p
 Getting started with querying
 Below are a few ways to show how to query the Compound V2 Subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
 
-Querying All Markets
-{
-  markets{
-    id
-    symbol
-    accrualBlockNumber
-    totalSupply
-    exchangeRate
-    totalReserves
-    totalCash
-    totalDeposits
-    totalBorrows
-    perBlockBorrowInterest
-    perBlockSupplyInterest
-    borrowIndex
-    tokenPerEthRatio
-    tokenPerUSDRatio
-  }
-}
-Querying All Users, and all their CToken balances
-Commented out values are temporarily not being used.
+### Querying All Markets
+        {
+          markets{
+            id
+            symbol
+            accrualBlockNumber
+            totalSupply
+            exchangeRate
+            totalReserves
+            totalCash
+            totalDeposits
+            totalBorrows
+            perBlockBorrowInterest
+            perBlockSupplyInterest
+            borrowIndex
+            tokenPerEthRatio
+            tokenPerUSDRatio
+          }
+        }
 
-{
-  users{
-    id
-    countLiquidated
-    countLiquidator
-    accountLiquidity
-    availableToBorrowEth
-    totalSupplyInEth
-    totalBorrowInEth
-    cTokens{
-      id
-      user
-      accrualBlockNumber
-      transactionTimes
-      transactionHashes
-      cTokenBalance
-      underlyingSupplied
-      underlyingRedeemed
-      underlyingBalance
-      interestEarned
-      totalBorrowed
-      totalRepaid
-      borrowBalance
-      borrowInterest
-    }
-  }
-}
+### Querying All Users, and all their CToken balances
+
+        {
+          users{
+            id
+            countLiquidated
+            countLiquidator
+            accountLiquidity
+            availableToBorrowEth
+            totalSupplyInEth
+            totalBorrowInEth
+            cTokens{
+              id
+              user
+              accrualBlockNumber
+              transactionTimes
+              transactionHashes
+              cTokenBalance
+              underlyingSupplied
+              underlyingRedeemed
+              underlyingBalance
+              interestEarned
+              totalBorrowed
+              totalRepaid
+              borrowBalance
+              borrowInterest
+            }
+          }
+        }
 
 ## Networks and Performance
 This subgraph can be found on The Graph Hosted Service at [https://thegraph.com/explorer/subgraph/elfedy/ayaesg](https://thegraph.com/explorer/subgraph/elfedy/ayaesg).

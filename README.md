@@ -7,7 +7,7 @@ This Subgraph ingests the following events emitted by the contracts of the ESD p
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
 
-Meta's `lpAddress` stores address of the current pool contract.
+Meta's `lpAddress` stores the address of the current pool contract.
 ```
 {
   metas(first: 5) {
@@ -16,6 +16,52 @@ Meta's `lpAddress` stores address of the current pool contract.
   }
 }
 ```
+
+
+
+```
+{
+  epochSnapshots(first: 5) {
+    id
+    epoch
+    timestamp
+    block
+
+    expiredCoupons
+    outstandingCoupons
+    couponsExpiration
+    oraclePrice
+    bootstrappingAt
+
+    daoBondedEsdTotal
+    daoBondedEsdsTotal
+
+    daoBondedEsdsFrozen
+    daoBondedEsdsFluid
+    daoBondedEsdsLocked
+    
+    daoStagedEsdTotal
+    daoStagedEsdFrozen
+    daoStagedEsdFluid
+    daoStagedEsdFrozen
+    
+    lpBondedUniV2Total
+    lpBondedUniV2Frozen
+    lpBondedUniV2Fluid
+    
+    lpStagedUniV2Total
+    lpStagedUniV2Frozen
+    lpStagedUniV2Fluid
+    
+    lpClaimableEsdTotal
+    lpClaimableEsdFrozen
+    lpClaimableEsdFluid
+    lpRewardedEsdTotal
+  }
+}
+```
+
+
 
 
 

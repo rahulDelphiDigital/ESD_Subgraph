@@ -121,6 +121,12 @@ The following query returns the history of funds to be frozen. The parameters ar
 }
 ```
 
+The following query returns the ESD supply history. The parameters are briefly described below - 
+  - epoch : The epoch number 
+  - daoLockedTotal : Total DAO tokens locked
+  - lpLockedTotal : Total LP tokens locked
+  - totalSupply : Total ESD supply
+
 ```
 {
   esdSupplyHistories(first: 5) {

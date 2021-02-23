@@ -4,6 +4,11 @@ The dollar protocol is operated by a DAO that governs and operates the supply of
 # Empty Set Dollar Subgraph
 This Subgraph ingests the following events emitted by the contracts of the ESD protocol. 
 
+## Basic Terminologies
+
+**Bonding** - Bonding is the act of locking your token in the Empty Set Dollar DAO to gain benefits such as voting or rewards.
+**Staging** - Tokens must pass through a staging phase when entering the DAO. This state is used to control the deposit and withdrawal of tokens when your tokens are "fluid". 
+
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
 
@@ -28,22 +33,20 @@ Dollar's DAO splits time into distinct `epochs` of roughly one day to simplify l
     block
 
     expiredCoupons
-    outstandingCoupons
     couponsExpiration
     oraclePrice
-    bootstrappingAt
 
-    daoBondedEsdTotal
-    daoBondedEsdsTotal
+    daoBondedEsdTotal (ESD can be bonded for rewards, minting ESDS)
+    daoBondedEsdsTotal (Amount of ESDS)
 
-    daoBondedEsdsFrozen
+    daoBondedEsdsFrozen  (total ESDS is in accounts that are frozen)
     daoBondedEsdsFluid
-    daoBondedEsdsLocked
+    daoBondedEsdsLocked (total ESDS locked during voting)
     
-    daoStagedEsdTotal
+    daoStagedEsdTotal 
     daoStagedEsdFrozen
     daoStagedEsdFluid
-    daoStagedEsdFrozen
+    daoStagedEsdFrozen 
     
     lpBondedUniV2Total
     lpBondedUniV2Frozen
@@ -60,6 +63,35 @@ Dollar's DAO splits time into distinct `epochs` of roughly one day to simplify l
   }
 }
 ```
+ expiredCoupons : Number of coupons that got expired during the current Epoch
+ couponsExpiration : 
+ oraclePrice : The current pricv  incentivized trading pool on Uniswap.
+
+    daoBondedEsdTotal (ESD can be bonded for rewards, minting ESDS)
+    daoBondedEsdsTotal (Amount of ESDS)
+
+    daoBondedEsdsFrozen  (total ESDS is in accounts that are frozen)
+    daoBondedEsdsFluid
+    daoBondedEsdsLocked (total ESDS locked during voting)
+    
+    daoStagedEsdTotal 
+    daoStagedEsdFrozen
+    daoStagedEsdFluid
+    daoStagedEsdFrozen 
+    
+    lpBondedUniV2Total
+    lpBondedUniV2Frozen
+    lpBondedUniV2Fluid
+    
+    lpStagedUniV2Total
+    lpStagedUniV2Frozen
+    lpStagedUniV2Fluid
+    
+    lpClaimableEsdTotal
+    lpClaimableEsdFrozen
+    lpClaimableEsdFluid
+    lpRewardedEsdTotal
+
 
 
 ```

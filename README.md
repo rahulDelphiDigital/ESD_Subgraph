@@ -94,7 +94,15 @@ The following query returns the protocol state for a particular `epoch`. The ret
 }
 ```
 
-
+The following query returns the history of funds to be frozen. The parameters are briefly described below - 
+  - epoch : The epoch number 
+  - daoStagedEsdFluidToFrozen : ESD balance Staged from fluid to frozen state 
+  - daoStagedEsdLockedToFrozen : ESD balance Staged from locked to frozen state 
+  - daoBondedEsdsFluidToFrozen : Bonded ESDS balance moved from fluid to frozen state 
+  - daoBondedEsdsLockedToFrozen : Bonded ESDS balance moved from locked to frozen state 
+  - lpStagedUniV2FluidToFrozen : Staged LP tokens moved from fluid to frozen state
+  - lpBondedUniV2FluidToFrozen : Bonded LP tokens moved from fluid to frozen state
+  - lpClaimableEsdFluidToFrozen : Claimable ESD balance moved from fluid to frozen state
 
 
 ```

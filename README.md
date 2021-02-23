@@ -63,7 +63,8 @@ Meta's `lpAddress` stores the address of the current pool contract.
 
 
 
-
+## Contract Events Mapped by the SubGraph
+SubGraph currently listens to the following events to update the state of the indexed data.
 
 #### UpgradeableContract
         - Upgraded(indexed address) 

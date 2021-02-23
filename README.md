@@ -139,6 +139,12 @@ The following query returns the ESD supply history. The parameters are briefly d
 }
 ```
 
+The following query returns the LP Token history. The parameters are briefly described below - 
+  - epoch : The epoch number 
+  - totalStaged : Total LP tokens staged during the epoch
+  - totalBonded : Total LP tokens bonded during the epoch
+  - totalSupply : LP tokens total supply
+
 ```
 {
   lpUniV2TokenHistories(first: 5) {

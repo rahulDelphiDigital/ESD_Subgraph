@@ -27,6 +27,10 @@ Meta's `lpAddress` stores the address of the current pool contract.
 }
 ```
 
+The following query returns the protocol state for a particular `epoch`
+ - expiredCoupons : Number of coupons that got expired during the current Epoch
+ - couponsExpiration : Epoch when the Coupons will get expired
+ - oraclePrice : The current price from the Uniswap price oracle
 
 ```
 {
@@ -67,11 +71,6 @@ Meta's `lpAddress` stores the address of the current pool contract.
   }
 }
 ```
- expiredCoupons : Number of coupons that got expired during the current Epoch
- 
- couponsExpiration : Epoch when the Coupons will get expired
- 
- oraclePrice : The current price from the Uniswap price oracle
 
     daoBondedEsdTotal (ESD can be bonded for rewards, minting ESDS)
     daoBondedEsdsTotal (Amount of ESDS)

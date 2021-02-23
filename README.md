@@ -156,6 +156,18 @@ The following query returns the LP Token history. The parameters are briefly des
   }
 }
 ```
+The following query returns the current balances for user address. The parameters are briefly described below - 
+  - id : The epoch number 
+  - esdBalance : ESD token balance
+  - uniV2Balance : LP tokens balance
+  - daoBondedEsds : Bonded tokens balance
+  - daoStagedEsd : Staged tokens balance
+  - daoLockedUntilEpoch : Balance locked 
+  - daoFluidUntilEpoch : Balance fluid
+  - lpBondedUniV2 : LP tokens currently bonded
+  - lpStagedUniV2 : LP tokens currently staged
+  - lpClaimableEsd : LP tokens currently claimable
+  - lpFluidUntilEpoch : LP tokens fluid
 
 ```
 {

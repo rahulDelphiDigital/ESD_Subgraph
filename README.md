@@ -12,8 +12,7 @@ The dollar protocol is operated by a DAO that governs and operates the supply of
 **Coupons** - Coupons are offered by the protocol as an incentive to voluntarily burn ESD. The amount of ESD burned multiplied by the premium are issued in place of the burned ESD via coupons. When the money supply grows again the coupon holder may redeem their coupon for ESD at a one-to-one ratio. 
 
 # Empty Set Dollar Subgraph
-This Subgraph ingests the following events emitted by the contracts of the ESD protocol. 
-
+You can interact with the ESD SubGraph at - https://thegraph.com/explorer/subgraph/elfedy/ayaesg
 
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.

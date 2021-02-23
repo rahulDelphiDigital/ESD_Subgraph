@@ -67,10 +67,10 @@ Commented out values are temporarily not being used.
     id
     countLiquidated
     countLiquidator
-#    accountLiquidity
-#    availableToBorrowEth
-#    totalSupplyInEth
-#    totalBorrowInEth
+    accountLiquidity
+    availableToBorrowEth
+    totalSupplyInEth
+    totalBorrowInEth
     cTokens{
       id
       user
@@ -80,12 +80,12 @@ Commented out values are temporarily not being used.
       cTokenBalance
       underlyingSupplied
       underlyingRedeemed
-#      underlyingBalance
-#      interestEarned
+      underlyingBalance
+      interestEarned
       totalBorrowed
       totalRepaid
-#      borrowBalance
-#      borrowInterest
+      borrowBalance
+      borrowInterest
     }
   }
 }

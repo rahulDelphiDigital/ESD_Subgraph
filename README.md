@@ -27,10 +27,32 @@ Meta's `lpAddress` stores the address of the current pool contract.
 }
 ```
 
-The following query returns the protocol state for a particular `epoch`
+The following query returns the protocol state for a particular `epoch`. The returned paramters are briefly described below - 
+
+ - epoch : The epoch number 
  - expiredCoupons : Number of coupons that got expired during the current Epoch
  - couponsExpiration : Epoch when the Coupons will get expired
  - oraclePrice : The current price from the Uniswap price oracle
+ - daoBondedEsdTotal : ESD balance bonded for this epoch 
+ - daoBondedEsdsTotal : ESDS balance bonded for this epoch 
+ - daoBondedEsdsFrozen : ESDS balance frozen for this epoch 
+ - daoBondedEsdsFluid : ESDS balance fluid for this epoch 
+ - daoBondedEsdsLocked : ESDS balance locked for this epoch 
+ - daoStagedEsdTotal : ESD balance staged for this epoch 
+ - daoStagedEsdFrozen : ESD balance frozen for this epoch  
+ - daoStagedEsdFluid : ESD balance fluid for this epoch  
+ - daoStagedEsdFrozen : ESD balance frozen for this epoch  
+ - lpBondedUniV2Total : LP tokens (Uniswap pool) balance bonded for this epoch 
+ - lpBondedUniV2Frozen : LP tokens (Uniswap pool) balance frozen for this epoch  
+ - lpBondedUniV2Fluid : LP tokens (Uniswap pool) balance fluid for this epoch  
+ - lpStagedUniV2Total : Total Staged LP tokens balance bonded for this epoch 
+ - lpStagedUniV2Frozen : Total Frozen Staged LP tokens balance bonded for this epoch 
+ - lpStagedUniV2Fluid : Total Fluid Staged LP tokens balance bonded for this epoch 
+ - lpClaimableEsdTotal : Total ESD tokens claimable by the LP token holders
+ - lpClaimableEsdFrozen : Frozen ESD tokens claimable by the LP token holders
+ - lpClaimableEsdFluid : Fluid ESD tokens claimable by the LP token holders
+ - lpRewardedEsdTotal : Total ESD tokens rewarded to the LP holders
+
 
 ```
 {

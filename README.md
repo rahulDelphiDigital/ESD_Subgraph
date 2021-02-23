@@ -66,12 +66,12 @@ The following query returns the protocol state for a particular `epoch`. The ret
     couponsExpiration
     oraclePrice
 
-    daoBondedEsdTotal (ESD can be bonded for rewards, minting ESDS)
-    daoBondedEsdsTotal (Amount of ESDS)
+    daoBondedEsdTotal 
+    daoBondedEsdsTotal 
 
-    daoBondedEsdsFrozen  (total ESDS is in accounts that are frozen)
+    daoBondedEsdsFrozen
     daoBondedEsdsFluid
-    daoBondedEsdsLocked (total ESDS locked during voting)
+    daoBondedEsdsLocked
     
     daoStagedEsdTotal 
     daoStagedEsdFrozen
@@ -94,30 +94,6 @@ The following query returns the protocol state for a particular `epoch`. The ret
 }
 ```
 
-    daoBondedEsdTotal (ESD can be bonded for rewards, minting ESDS)
-    daoBondedEsdsTotal (Amount of ESDS)
-
-    daoBondedEsdsFrozen  (total ESDS is in accounts that are frozen)
-    daoBondedEsdsFluid
-    daoBondedEsdsLocked (total ESDS locked during voting)
-    
-    daoStagedEsdTotal 
-    daoStagedEsdFrozen
-    daoStagedEsdFluid
-    daoStagedEsdFrozen 
-    
-    lpBondedUniV2Total
-    lpBondedUniV2Frozen
-    lpBondedUniV2Fluid
-    
-    lpStagedUniV2Total
-    lpStagedUniV2Frozen
-    lpStagedUniV2Fluid
-    
-    lpClaimableEsdTotal
-    lpClaimableEsdFrozen
-    lpClaimableEsdFluid
-    lpRewardedEsdTotal
 
 
 

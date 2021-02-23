@@ -17,7 +17,7 @@ Meta's `lpAddress` stores the address of the current pool contract.
 }
 ```
 
-
+Dollar's DAO splits time into distinct `epochs` of roughly one day to simplify logic around governance, supply regulation, and flash loan resistance. The following query will return the protocol state during a particular epoch.
 
 ```
 {

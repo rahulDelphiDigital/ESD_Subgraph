@@ -3,7 +3,7 @@ The dollar protocol is operated by a DAO that governs and operates the supply of
 
 ## Terminologies
 
-**Bonding** - Bonding is the act of locking your token in the Empty Set Dollar DAO to gain benefits such as voting or rewards.
+**Bonding** - Bonding is the act of locking your ESD token in the Empty Set Dollar DAO / LP tokens in the pool contract, to gain benefits such as voting or rewards.
 
 **Staging** - Tokens must pass through a staging phase when entering the DAO. When the tokens are staged they will be available to bond. This state is used to control the deposit and withdrawal of tokens. 
 

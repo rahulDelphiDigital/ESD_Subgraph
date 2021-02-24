@@ -19,37 +19,27 @@ You can also run this subgraph locally, if you wish. Instructions for that can b
 ## Getting started with querying
 Below are some of the queries supported by the Subgraph. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the querying api.
 
-Meta's `lpAddress` stores the address of the current pool contract.
-```
-{
-  metas(first: 5) {
-    id
-    lpAddress
-  }
-}
-```
-
 The following query returns the protocol state for a particular `epoch`. The returned paramters are briefly described below - 
 
  - epoch : The epoch number 
  - expiredCoupons : Number of coupons that got expired during the current Epoch
- - couponsExpiration : Epoch when the Coupons will get expired
- - oraclePrice : The current price from the Uniswap price oracle
- - daoBondedEsdTotal : ESD balance bonded for this epoch 
- - daoBondedEsdsTotal : ESDS balance bonded for this epoch 
- - daoBondedEsdsFrozen : ESDS balance frozen for this epoch 
- - daoBondedEsdsFluid : ESDS balance fluid for this epoch 
- - daoBondedEsdsLocked : ESDS balance locked for this epoch 
- - daoStagedEsdTotal : ESD balance staged for this epoch 
- - daoStagedEsdFrozen : ESD balance frozen for this epoch  
- - daoStagedEsdFluid : ESD balance fluid for this epoch  
- - daoStagedEsdFrozen : ESD balance frozen for this epoch  
- - lpBondedUniV2Total : LP tokens (Uniswap pool) balance bonded for this epoch 
- - lpBondedUniV2Frozen : LP tokens (Uniswap pool) balance frozen for this epoch  
- - lpBondedUniV2Fluid : LP tokens (Uniswap pool) balance fluid for this epoch  
- - lpStagedUniV2Total : Total Staged LP tokens balance bonded for this epoch 
- - lpStagedUniV2Frozen : Total Frozen Staged LP tokens balance bonded for this epoch 
- - lpStagedUniV2Fluid : Total Fluid Staged LP tokens balance bonded for this epoch 
+ - couponsExpiration : Epoch when the Coupons emitted during the target epoch will expire.
+ - oraclePrice : The price taken from the Uniswap price oracle at the start of the epoch.
+ - daoBondedEsdTotal : ESD balance bonded at the end of the epoch 
+ - daoBondedEsdsTotal : ESDS balance bonded at the end of the epoch
+ - daoBondedEsdsFrozen : ESDS balance frozen at the end of the epoch
+ - daoBondedEsdsFluid : ESDS balance fluid at the end of the epoch
+ - daoBondedEsdsLocked : ESDS balance locked at the end of the epoch
+ - daoStagedEsdTotal : ESD balance staged at the end of the epoch
+ - daoStagedEsdFrozen : ESD balance frozen at the end of the epoch 
+ - daoStagedEsdFluid : ESD balance fluid at the end of the epoch
+ - daoStagedEsdFrozen : ESD balance frozen at the end of the epoch  
+ - lpBondedUniV2Total : LP tokens (Uniswap pool) balance bonded at the end of the epoch 
+ - lpBondedUniV2Frozen : LP tokens (Uniswap pool) balance frozen at the end of the epoch
+ - lpBondedUniV2Fluid : LP tokens (Uniswap pool) balance fluid at the end of the epoch
+ - lpStagedUniV2Total : Total Staged LP tokens balance bonded at the end of the epoch
+ - lpStagedUniV2Frozen : Total Frozen Staged LP tokens balance bonded at the end of the epoch
+ - lpStagedUniV2Fluid : Total Fluid Staged LP tokens balance bonded at the end of the epoch
  - lpClaimableEsdTotal : Total ESD tokens claimable by the LP token holders
  - lpClaimableEsdFrozen : Frozen ESD tokens claimable by the LP token holders
  - lpClaimableEsdFluid : Fluid ESD tokens claimable by the LP token holders
@@ -96,16 +86,15 @@ The following query returns the protocol state for a particular `epoch`. The ret
 }
 ```
 
-The following query returns the history of funds to be frozen. The parameters are briefly described below - 
+The following query returns the funds that go back from locked/fluid to frozen on the target epoch. The parameters are briefly described below - 
   - epoch : The epoch number 
-  - daoStagedEsdFluidToFrozen : ESD balance Staged from fluid to frozen state 
-  - daoStagedEsdLockedToFrozen : ESD balance Staged from locked to frozen state 
-  - daoBondedEsdsFluidToFrozen : Bonded ESDS balance moved from fluid to frozen state 
-  - daoBondedEsdsLockedToFrozen : Bonded ESDS balance moved from locked to frozen state 
-  - lpStagedUniV2FluidToFrozen : Staged LP tokens moved from fluid to frozen state
-  - lpBondedUniV2FluidToFrozen : Bonded LP tokens moved from fluid to frozen state
-  - lpClaimableEsdFluidToFrozen : Claimable ESD balance moved from fluid to frozen state
-
+  - daoStagedEsdFluidToFrozen : ESD balance Staged that goes back from fluid to frozen state at the start of the epoch
+  - daoStagedEsdLockedToFrozen : ESD balance Staged that goes back from locked to frozen state at the start of the epoch
+  - daoBondedEsdsFluidToFrozen : Bonded ESDS balance that goes back from fluid to frozen state at the start of the epoch
+  - daoBondedEsdsLockedToFrozen : Bonded ESDS balance that goes back from locked to frozen state at the start of the epoch
+  - lpStagedUniV2FluidToFrozen : Staged LP tokens that goes back from fluid to frozen state at the start of the epoch
+  - lpBondedUniV2FluidToFrozen : Bonded LP tokens that goes back from fluid to frozen state at the start of the epoch
+  - lpClaimableEsdFluidToFrozen : Claimable ESD balance that goes back from fluid to frozen state at the start of the epoch
 
 ```
 {
@@ -143,8 +132,8 @@ The following query returns the ESD supply history. The parameters are briefly d
 
 The following query returns the LP Token history. The parameters are briefly described below - 
   - epoch : The epoch number 
-  - totalStaged : Total LP tokens staged during the epoch
-  - totalBonded : Total LP tokens bonded during the epoch
+  - totalStaged : Total LP tokens staged at the end of the epoch
+  - totalBonded : Total LP tokens bonded at the end of the epoch
   - totalSupply : LP tokens total supply
 
 ```
